@@ -1,10 +1,15 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, chromium } from '@playwright/test';
 
 test('has title', async ({ page }) => {
+  // const browser = await chromium.launch({headless: false});
+  // const page = await browser.newPage();
+
   await page.goto('https://material.playwrightvn.com/');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Tài liệu học automation test/);
+
+  await page.close();
 });
 
 test('get started link', async ({ page }) => {
