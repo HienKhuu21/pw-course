@@ -1,4 +1,4 @@
-const myNumber = "a";
+const myNumber = 70;
 let condition;
 
 if (myNumber > 0) {
