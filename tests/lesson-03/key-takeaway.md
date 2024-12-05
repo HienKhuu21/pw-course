@@ -9,15 +9,21 @@
             - Gõ “:wq” -> write and quit
         2. git commit --amend -m"message"
     - Đưa từ vùng staging về working directory: git restore --staged <file>
-        - EX: [git restore --stage <tests\lesson-03\Uncommit\file4.txt>](https://drive.google.com/file/d/1n_Jpp1NxyEiAR1I94V957eKHY1C0fyGT/view?usp=drive_link)
+        - EX: git restore --stage <tests\lesson-03\Uncommit\file4.txt> 
+[git restore --stage iamge](https://photos.google.com/u/2/share/AF1QipOQAevxwh1JCkJxbYa_xZCKNSM3JjvsjeerbD_vyjYmgOs16umYVntlWSxemN1mWw/photo/AF1QipOOuMD3iV1ndqanFVGZYrEK8GQ1iFFDfJ_bU2eb?key=VEtvNDROQ0ZTeWQ0ZVBmR3NzOFI3eklRR1FaWUx3)
+
     - Đưa từ vùng repository về working directory (uncommit): git reset HEAD~n (n = số commit gần nhất muốn uncommit) 
-        - EX: [git reset HEAD~2](https://drive.google.com/file/d/1HKgfwDJAr0xYNHx4bQ3yIffAuE7DREkk/view?usp=drive_link)
+[git reset image](https://photos.google.com/u/2/share/AF1QipOQAevxwh1JCkJxbYa_xZCKNSM3JjvsjeerbD_vyjYmgOs16umYVntlWSxemN1mWw/photo/AF1QipNe_HZWdSejGWMCDsmsDplbN04zhv0OzB2ATPQO?key=VEtvNDROQ0ZTeWQ0ZVBmR3NzOFI3eklRR1FaWUx3)
 
 ## Branching model
     - git branch : xem các nhánh đang có trong proj, nhánh nào có * ở trước là đang ở nhánh đó
+
     - git branch <ten_branch> : tạo 1 nhánh mới từ nhánh hiện tại
-    - git checkout <ten_branch> : đỗi wa nhánh mới
+
+    - git checkout <ten_branch> : đổi wa nhánh mới
+
     - git checkout -b <ten_branch> : tạo 1 nhánh mới từ nhánh hiện tại + đỗi wa nhánh mới
+
     - .gitignore file: Dùng để bỏ qua các file không cần git theo dõi.
         1. Ignore file: file_name
         2. Ignore folder: folder-name/
@@ -71,11 +77,13 @@
             proclassduct["training"]["coding"] = "Typescript"
 
 ## Logical operator
+
     - && : cả 2 vế của mệnh đề đều đúng
     - || : một trong 2 vế đúng
     - ! : đảo ngược lại giá trị của mệnh đề
 
 ## array
+
     - Khai báo: let/const array_name = [item1, item2, ...]; 
                 let k11Student = ["Tien", "Duc", "Duong", "My"];
     - Truy xuất:
@@ -90,16 +98,22 @@
     - Function = hàm
         1. Hàm có thể có input param hoặc không
         2. Hàm có thể có return hoặc không
+
     - Khai báo
+
+        Syntax:        
         function <nameFunction>() {
             // to do here;
             return true;
         }
 
-        function <nameFunction>(x,y) {
+        Ex: 
+        function sumTwoNumber(x,y) {
             sum=x+y;
             return sum;
         }
+        let result = sumTwoNumber(2,10);
+        console.log(result); -> 12
 
 
 ## Phạm vi của biến
