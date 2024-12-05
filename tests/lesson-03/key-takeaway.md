@@ -10,9 +10,10 @@
         2. git commit --amend -m"message"
     - Đưa từ vùng staging về working directory: git restore --staged <file>
         - EX: git restore --stage <tests\lesson-03\Uncommit\file4.txt> 
-[git restore --stage iamge](https://photos.google.com/u/2/share/AF1QipOQAevxwh1JCkJxbYa_xZCKNSM3JjvsjeerbD_vyjYmgOs16umYVntlWSxemN1mWw/photo/AF1QipOOuMD3iV1ndqanFVGZYrEK8GQ1iFFDfJ_bU2eb?key=VEtvNDROQ0ZTeWQ0ZVBmR3NzOFI3eklRR1FaWUx3)
+[git restore --stage image](https://photos.google.com/u/2/share/AF1QipOQAevxwh1JCkJxbYa_xZCKNSM3JjvsjeerbD_vyjYmgOs16umYVntlWSxemN1mWw/photo/AF1QipOOuMD3iV1ndqanFVGZYrEK8GQ1iFFDfJ_bU2eb?key=VEtvNDROQ0ZTeWQ0ZVBmR3NzOFI3eklRR1FaWUx3)
 
     - Đưa từ vùng repository về working directory (uncommit): git reset HEAD~n (n = số commit gần nhất muốn uncommit) 
+        EX: git reset HEAD~2
 [git reset image](https://photos.google.com/u/2/share/AF1QipOQAevxwh1JCkJxbYa_xZCKNSM3JjvsjeerbD_vyjYmgOs16umYVntlWSxemN1mWw/photo/AF1QipNe_HZWdSejGWMCDsmsDplbN04zhv0OzB2ATPQO?key=VEtvNDROQ0ZTeWQ0ZVBmR3NzOFI3eklRR1FaWUx3)
 
 ## Branching model
