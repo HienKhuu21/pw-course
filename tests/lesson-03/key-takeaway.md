@@ -76,6 +76,22 @@
     - Gán lại
         EX: user.age = 28
             proclassduct["training"]["coding"] = "Typescript"
+    
+    - Note: const object ko gán lại dc, nhưng có thể gán lại thuộc tính
+        EX: 
+            const student = {“name”: “alex”, “age”: 20};
+            student = {“name”: “Nagi”, “age”: 18};          // ERROR
+            student.name = “Nagi”;                          // OK      
+
+    - Thêm thuộc tính cho object
+            let bike = {make: 'Yamaha',model: 'YZF-R3'};
+            bike.color = “Blue”;
+            bike[“price new”] = 100;
+            console.log(bike); >>> {make: 'Yamaha', model: 'YZF-R3', color: 'Blue', ‘price new’ : 100}
+
+    - Xóa thuộc tính
+            delete bike.color;
+            console.log(bike); >>> {make: 'Yamaha', model: 'YZF-R3', ‘price new’ : 100}
 
 ## Logical operator
 
