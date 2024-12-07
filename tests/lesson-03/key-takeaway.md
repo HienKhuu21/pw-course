@@ -55,7 +55,7 @@
 
         let user = {
             name:"Tien",
-            age:"39",
+            age:39,
             lacation:"HCM"              // thuoc tính cuối ko có ,
         }
 
