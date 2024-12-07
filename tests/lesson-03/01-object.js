@@ -59,7 +59,7 @@ let product = {
 printTitle("exercise 4 result:");
 
 for (let i in product) {
-    print(`Sản phẩm \"${i}\" có giá trị \"product[i]\"`);
+    print(`Sản phẩm \"${i}\" có giá trị \"${product[i]}\"`);
 }
 
 printNewline();
