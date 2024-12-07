@@ -162,7 +162,7 @@ const productList = [
 function checkAllPriceGreaterThanZero() {
     let totalItems = productList.length;
     for (let i = 0; i < totalItems; i++) {
-        if(productList[i].price===0){
+        if (productList[i].price === 0) {
             return "List contains item '" + productList[i].name + "' with price = 0";
         }
     }
@@ -174,15 +174,15 @@ console.log(checkAllPriceGreaterThanZero());
 // --------------------------------- Exercise 8
 console.log("\n --- Exercise 8 Result --- \n");
 
-function checkStoreState (hour) {
+function checkStoreState(hour) {
     let open = 900;
     let close = 2100;
     let timePart = hour.split(" ");
-    let currentHour = parseInt(timePart[0].replaceAll(':', ''),10);
-    if (timePart[1]==="PM" || timePart[1]==="pm"){
+    let currentHour = parseInt(timePart[0].replaceAll(':', ''), 10);
+    if (timePart[1] === "PM" || timePart[1] === "pm") {
         currentHour = currentHour + 1200;
     }
-    if (currentHour>=open && currentHour<=close){
+    if (currentHour >= open && currentHour <= close) {
         console.log("Store is opening");
     } else {
         console.log("Store is closed");
@@ -194,8 +194,8 @@ checkStoreState("10:00 PM");
 // --------------------------------- Exercise 9
 console.log("\n --- Exercise 9 Result --- \n");
 
-function checkAge (age) {
-    if (age <= 5){
+function checkAge(age) {
+    if (age <= 5) {
         console.log("Tre em duoc mien phi ve");
     } else if (age > 5 && age <= 17) {
         console.log("Gia ve cho thanh thieu nien la: 50K");
@@ -203,15 +203,15 @@ function checkAge (age) {
         console.log("Gia ve cho nguoi lon la: 100K");
     }
 }
- 
+
 checkAge(17);
 
 // --------------------------------- Exercise 10
 console.log("\n --- Exercise 10 Result --- \n");
 
-function printMonthName (monthNum) {
+function printMonthName(monthNum) {
     let month;
-    switch(monthNum){
+    switch (monthNum) {
         case 1:
             month = "January";
             break;
@@ -251,37 +251,37 @@ function printMonthName (monthNum) {
     }
     console.log(month);
 }
- 
+
 printMonthName(12);
 
 // --------------------------------- Exercise 11
 console.log("\n --- Exercise 11 Result --- \n");
 
-function printScoreRate(score){
-    if(score>=8){
+function printScoreRate(score) {
+    if (score >= 8) {
         console.log("Hoc Luc: Gioi");
-    } else if(score<8 && score >=6.5){
+    } else if (score < 8 && score >= 6.5) {
         console.log("Hoc Luc: Kha");
-    } else if(score<6.5 && score >= 5){
+    } else if (score < 6.5 && score >= 5) {
         console.log("Hoc Luc: Trung Binh");
     } else {
         console.log("Hoc Luc: Yeu");
     }
 }
- 
+
 printScoreRate(6.5);
 
 // --------------------------------- Exercise 12
 console.log("\n --- Exercise 12 Result --- \n");
 
-function checkTemperature(temperature){
-    if(temperature>=30){
+function checkTemperature(temperature) {
+    if (temperature >= 30) {
         console.log("Thoi tiet dang NONG voi nhiet do la: " + temperature);
-    } else if(temperature<30 && temperature >=20){
+    } else if (temperature < 30 && temperature >= 20) {
         console.log("Thoi tiet dang MAT voi nhiet do la: " + temperature);
     } else {
         console.log("Thoi tiet dang LANH voi nhiet do la: " + temperature);
     }
 }
- 
+
 checkTemperature(20.5);
