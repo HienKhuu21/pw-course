@@ -23,12 +23,23 @@ let workers = {
 let sum=0;
 
 for (let i in workers) {
-    if (Number.isInteger(workers[i]) == true) {
+    // if (Number.isInteger(workers[i]) == true) {
+    //     sum += workers[i];
+    // }
+    if (Number.isFinite(workers[i]) == true) {
         sum += workers[i];
     }
 }
 
 console.log("Sum of number in array is: " + sum);
+console.log("\n --- Exercise 2 result Method 2--- \n");
+
+for (const key in workers) {
+    if (typeof key === 'number') {
+      sum += workers[key];
+    }
+  }
+  console.log("Sum of number in array is: " + sum);
 
 // --------------------------------- Exercise 3
 console.log("\n --- Exercise 3 result --- \n");
