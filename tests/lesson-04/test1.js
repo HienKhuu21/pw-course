@@ -48,15 +48,17 @@ function decryptCode(code) {
 
     for (let letter of code) {
         if (letter === letter.toLowerCase()) {
-            decryptArray.push(letter.toUpperCase());
+            //decryptArray.push(letter.toUpperCase());
+            decryptText += letter.toUpperCase();
         } else {
-            decryptArray.push(letter.toLowerCase());
+            //decryptArray.push(letter.toLowerCase());
+            decryptText += letter.toLowerCase();
         }
     }
 
-    for (let char in decryptArray) {
-        decryptText += decryptArray[char];
-    }
+    // for (let char in decryptArray) {
+    //     decryptText += decryptArray[char];
+    // }
 
     return decryptText;
 }
