@@ -13,19 +13,27 @@ test('Add Todo Item', async ({ page }) => {
         { "title": "Ý tưởng trị bệnh đục thủy tinh thể thắng giải Sáng tạo tế bào gốc", "content": "Ba nữ sinh lớp 11 với ý tưởng dùng tế bào gốc phục hồi mắt bị đục thủy tinh thể giành giải nhất cuộc thi Sáng tạo tế bào gốc, với phần thưởng 30 triệu đồng. Sáng 15/12, Viện tế bào gốc (trường Đại học Khoa học Tự nhiên, Đại học Quốc gia TP HCM) phối hợp các đối tác tổ chức chung kết cuộc thi Sáng tạo tế bào gốc lần 9 dành cho học sinh, sinh viên." },
         { "title": "Tàu khu trục Zumwalt mang tên lửa siêu thanh mạnh thế nào?", "content": "Tàu khu trục tàng hình USS Zumwalt của Hải quân Mỹ đang được nâng cấp với hệ thống vũ khí siêu thanh thử nghiệm mang tên Conventional Prompt Strike." }
     ];
-    await page.goto('https://material.playwrightvn.com/');
 
-    await page.locator('//a[contains(text(),"Bài học 4: Personal notes")]').click();
+    await test.step('Step 1: Truy cập trang https://material.playwrightvn.com/', async () => {
+        await page.goto('https://material.playwrightvn.com/');
+    });
 
-    for (let i in vnexpressNews) {
-        await page.locator('//input[@id="note-title"]').fill(vnexpressNews[i].title);
-        await page.locator('//textarea[@id="note-content"]').fill(vnexpressNews[i].content);
-        await page.locator('//button[text()="Add Note"]').click();
-        await page.locator('//ul[@id="notes-list"]//strong[text()="' + vnexpressNews[i].title + '"]').isVisible();
-    }
+    await test.step('Step 2: Tclick vào Bài học 4: Personal notes', async () => {
+        await page.locator('//a[contains(text(),"Bài học 4: Personal notes")]').click();
+    });
 
-    let searchVal = vnexpressNews[1].title;
+    await test.step('Step 3: Thêm mới 10 note có nội dung là tiêu đề và một phần ngắn (khoảng 3 dòng) tại báo https://vnexpress.net/khoa-hoc', async () => {
+        for (let i in vnexpressNews) {
+            await page.locator('//input[@id="note-title"]').fill(vnexpressNews[i].title);
+            await page.locator('//textarea[@id="note-content"]').fill(vnexpressNews[i].content);
+            await page.locator('//button[text()="Add Note"]').click();
+            await page.locator('//ul[@id="notes-list"]//strong[text()="' + vnexpressNews[i].title + '"]').isVisible();
+        }
+    });
 
-    await page.locator('//input[@id="search"]').fill(searchVal);
-    expect(await page.locator('//ul[@id="notes-list"]//strong[text()="' + searchVal + '"]').count()).toBeGreaterThan(0);
+    await test.step('Step 4: Thực hiện search theo tiêu đề bài báo bất kì', async () => {
+        let searchVal = vnexpressNews[4].title;
+        await page.locator('//input[@id="search"]').fill(searchVal);
+        expect(await page.locator('//ul[@id="notes-list"]//strong[text()="' + searchVal + '"]').count()).toBeGreaterThan(0);
+    });
 });
