@@ -19,12 +19,11 @@ test('Add Todo Item', async ({ page }) => {
 
     await test.step('Step 4: oá các todo có số lẻ', async () => {
         const browserPopup = async (dialog) => { await dialog.accept(); } // add type gì cho dialog giờ bà con :D
-
+        page.on('dialog', browserPopup);
         for (let i = 1; i <= 100; i++) {
-            if (i % 2 == 1) {
-                page.on('dialog', browserPopup);
+            if (i % 2 == 1) {                
                 await page.locator('//span[text()="Todo ' + i + '"]//following-sibling::div//button[text()="Delete"]').click();
-                page.off('dialog', browserPopup);
+                //page.off('dialog', browserPopup);
             }
         }
     });
